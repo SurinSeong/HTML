@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>컨테이너, 전역속성, 이미지</title>
+    </head>
+    <body>
+        <p>앉아서 하루종일 컴퓨터만 보니 배가 나옴.</p>
+        <p>
+            어째<br/>
+            걱정은 하지만 지금도 <q>골 때리는 그녀들</q> 재미있게 보고 있음.<br/>
+            물론 내 손에 츄러스 있음.
+        </p>
+
+        <div id="study">
+            <p class="text">행복하고 즐거움.</p>
+            <p class="text">당신들과 html 공부하니깐</p>
+        </div>
+
+        <div id="diet">
+            <p>걱정거리 생김.</p>
+            <p>배가 나옴.</p>
+            <p>필라테스 등록함.</p>
+        </div>
+
+        <p>
+            어째 걱정은 됨. 하지만 지금도
+            <!--
+                span 태그 : 줄바꿈 없음. 해당 글자에 마우스 올리면 title 뜸
+                br 태그 : 한 칸 뛰기
+            -->
+            <span title="축구예능프로그램"><q>골 때리는 그녀들</q></span>
+            보고 있는데 재밌음.<br/>
+            그리고 츄러스도 먹고 있음.
+        </p>
+        <!--
+            이미지 삽입
+            alt : 이미지가 나타나지 않을 경우 대체 방법
+        -->
+        <!-- 절대 경로 -->
+        <img
+            src = "C:/Users/tjdtn/Desktop/multicampus/html/img/puppy_01.jpg"
+            alt = "chatgpt로 생성한 강아지 사진"
+        />
+        <!-- 상대 경로 -->
+        <img
+            src="../html/img/puppy_01.jpg"
+            alt = "chatgpt가 만든 강아지 사진"
+            width="300"
+            height="300"
+        />
+        <!-- Google -->
+        <img
+            src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRmJ48WWpteGG1S6SDCaUviruuWvEjGlgalClhH8qz0PEDnzj2Y"
+            alt = "골든 리트리버 in google"
+            width="400"
+            height="300"        
+        />
+
+    </body>
+</html>
