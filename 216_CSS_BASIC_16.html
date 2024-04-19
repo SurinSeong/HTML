@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>반응형 웹과 뷰포트</title>
+        <style>
+            p {
+                margin: 0;
+                /* v(view)w(width)
+                w 기준, 너비 * (1/10) */
+                /* font-size: 10vw; */
+                /* 가장 작은 크기 기준 */
+                /* font-size: 10vmin; */
+                /* h 기준, 높이 * (1/10) */
+                /* font-size: 10vh; */
+                /* 가장 큰 크기 기준 */
+                font-size: 10vmax;
+            }
+
+            div.box {
+                width: 150px;
+                height: 150px;
+                background-color: teal;
+                color: white;
+            }
+
+            /* 화면의 크기에 맞춰서 화면 구성이 달라질 수 있도록 한다. */
+            @media screen and (max-width : 800px) {
+                div.box {
+                    background-color: red;
+                }
+            }
+
+            @media screen and (min-width : 1000px) {
+                div.box {
+                    background-color: orange;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <p>무신사 MUSINSA</p>
+        <div class="box">
+            와우!
+        </div>
+    </body>
+</html>
