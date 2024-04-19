@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>변형과 전환</title>
+        <style>
+            .parent {
+                display: inline-block;
+                margin: 0 20px;
+            }
+            .child {
+                width: 150px;
+                height: 150px;
+                /* 색이 들어가서 구획 표시가 됨 */
+                background-color: red;
+            }
+
+            /*parent 부모 tag의 1번째 자식 tag, 거기에 child 클래스 선택*/
+            .parent:nth-child(1) > .child {
+                /* 원하는 값 만큼 이동 */
+                transform: translate(30px, 50px);
+            }
+            .parent:nth-child(2) > .child {
+                /* 가로 세로가 원래에서 scale안의 수의 비율 만큼 변화 */
+                transform: scale(1.2, 0.8);
+            }
+            .parent:nth-child(3) > .child {
+                /* 왼쪽으로 45도 만큼 찌그러짐 */
+                transform: skew(45deg);
+            }
+            .parent:nth-child(4) > .child {
+                /* 왼쪽으로 45도 만큼 돌아감 */
+                transform: rotate(45deg);
+            }
+
+            .parent:nth-child(4) > .child:hover {
+                width: 300px;
+                height: 300px;
+                background-color: yellowgreen;
+                /* 배경에 커서두면 2초 후에 지정한 색으로 바꾼다. */
+                /* duration delay 순서 */
+                transition: background-color 2s 0s linear;
+            }
+            .parent:nth-child(3) > .child:hover {
+                width: 300px;
+                height: 300px;
+                background-color: yellowgreen;
+                transition-property: width;
+                /* duration, delay 활용 >> 애니메이션 효과 */
+                transition-duration: 5s;
+                transition-delay: 1s;
+                
+                /* 애니메이션 조건 */
+                /* transition-timing-function: linear; */
+                /* transition-timing-function: ease; */
+                /* transition-timing-function: ease-in; */
+                transition-timing-function: ease-out;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <!-- 부모 자식 관계 -->
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>의사클래스</title>
+        <style>
+            .menu {
+            padding: 10px;
+            border-bottom: 1px solid black;
+            }
+            li > a {
+                display: inline-block;
+                width: 80px;
+                padding: 10px;
+                /* 밑줄 없애기 */
+                text-decoration: none;
+            }
+            /* 커서 두면 색이 바뀜 */
+            a:hover {
+                color: pink;
+                background-color: gray;
+            }
+            /* 누르면 색이 바뀜 */
+            a:active {
+                color: white;
+                background-color: black;
+            }
+            /* li의 세 번째만 적용 */
+            li:nth-child(3) {
+                font-size: 20px;
+            }
+
+            /* 의사클래스 */
+            /* 첫 번째 글자 색 바꾸기 */
+            a::first-letter {
+                color: red;
+            }
+            /* a 태그 뒤에 내용 넣기 */
+            a::after {
+                content: "보기";
+                color: violet;
+            }
+            /* a 태그 앞에 내용 넣기 */
+            a::before {
+                content: "네이버";
+                color: yellowgreen;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <ul class="menu">
+             <!-- "#" : 실제로는 어디로도 이동하지 않는 더미 링크 -->
+            <li><a href="#">사전</a></li>
+            <li><a href="#">뉴스</a></li>
+            <li><a href="#">증권</a></li>
+            <li><a href="#">지도</a></li>
+        </ul>
+    </body>
+</html>
